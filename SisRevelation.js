@@ -117,11 +117,13 @@ controle.iniciar();
 
 
 function comutarDesktopMobile() {
-	var necessario = ($("#tabuleiro").width() + $("#painel").width());
+//		var necessario = ($("#tabuleiro").width() + $("#painel").width());
 
-	if(window.innerWidth < necessario || window.innerHeight > window.innerWidth) {
+	if(/*window.innerWidth < necessario || */window.innerHeight > window.innerWidth) {
+		//alert("RETRATO: " + window.innerWidth + " X " + window.innerHeight);
 		$(document.body).addClass("mobile");
 	}else {
+//alert("PAISAGEM: " +window.innerWidth + " X " + window.innerHeight);
 		$(document.body).removeClass("mobile");
 	}
 }

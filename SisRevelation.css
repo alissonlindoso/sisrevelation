@@ -16,13 +16,14 @@ table {
 
 
 #tela {
-	width: auto;
-	height: auto;
+	width: 1338px;
+	height: 850px;
 
 	margin: auto;
 	padding: 10px;
 
 	display: inline-block;
+	position: relative;
 
 	border-width: 10px;
 	border-radius: 25px;
@@ -46,6 +47,9 @@ table {
 	padding-left: 0px;
 
 	display: inline-block;
+	
+	position: absolute;
+	left: 10px;
 
 	/*border: solid;*/
 }
@@ -450,11 +454,15 @@ table {
 	height: 840px;
 
 	margin-top: 0px;
-	margin-left: 10px;
+	margin-left: 0px;
 	padding: 0px;
 
 	display: inline-block;
 	vertical-align: top;
+
+	position: absolute;
+	left: 378px;
+	top: 10px;
 
 	border: 5px solid DimGrey;
 
@@ -556,9 +564,14 @@ table {
 
 .mobile #tela {
 	width: 970px;
-	height: 1243px;
+	height: 1228px;
 
 	position: relative;
+}
+
+.mobile #ajustavel {
+	position: initial;
+	left: none;
 }
 
 .mobile #painel {
@@ -635,12 +648,13 @@ table {
 }
 
 .mobile #tabuleiro {
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-left: 0px;
 
 	display: block;
 	vertical-align: bottom;
 
 	position: absolute;
-	top: 393px;
+	left: 10px;
+	top: 388px;
 }
