@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Cache-Control" content="no-store" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!--	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">	-->
+
+		<title>
+			SisRevelation: Chá de Revelação - Alisson & Macelle
+		</title>
+
+		<script type="text/javascript" src="jquery-3.2.0.js"></script>
+		<script type="text/javascript" src="SisRevelation.js"></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-97006308-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+		<link rel="icon" href="SisRevelation.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="SisRevelation.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="SisRevelation.css">
+	</head>
+	<body class="mobile" onresize="comutarDesktopMobile()" onload="textoParaVoz('Chá de Revelação - Alisson & Macelle (22 de abril de 2017, às 17 horas, no condomínio Sports Garden)')">
+	    <script type="text/javascript" src="cordova.js"></script>
+		
+		<div id="tela">
+			<div id="ajustavel">
+				<table name="painel" id="painel">
+					<tr height="50">
+						<td colspan="3">
+							<div class="titulo">SisRevelation</div>
+						</td>
+					</tr>
+					<tr height="135">
+						<td id="botoes" width="70" colspan="1" style="padding-left: 10px;">
+							<div id="musica" class="tocando" onclick="musica()"></div>
+							<div style="height: 10px;"></div>
+							<div id="reinicializar" class="reiniciar" onclick="reinicializar()"></div>
+						</td>
+						<td id="placar" width="300" colspan="2" style="padding-left: 10px;">
+							<span class="rotulo">PLACAR</span>
+							<div id="pontuacao_azul"><span>00</span></div>
+							<div id="pontuacao_versus">&nbsp;X&nbsp;</div>
+							<div id="pontuacao_rosa"><span>00</span></div>
+						</td>
+					</tr>
+					<tr height="95">
+						<td colspan="1" style="padding-left: 10px;">
+							<span class="rotulo">VEZ</span>
+							<div id="vez" class="vez_azul"><span></span></div>
+						</td>
+						<td colspan="1" style="padding-left: 10px;">
+							<span class="rotulo">CHANCES</span>
+							<div id="chances"><span>0</span></div>
+						</td>
+						<td colspan="1" style="padding-left: 10px;">
+							<span class="rotulo">RODADA</span>
+							<div id="rodadas"><span>0</span></div>
+						</td>
+					</tr>
+					<tr height="95">
+						<td id="letreiro" width="370" colspan="3" style="padding-left: 5px;">
+							<span class="rotulo">NOME</span>
+							<div id="letra_00" class="letra"><span>_</span></div>
+							<div id="letra_01" class="letra"><span>_</span></div>
+							<div id="letra_02" class="letra"><span>_</span></div>
+							<div id="letra_03" class="letra"><span>_</span></div>
+							<div id="letra_04" class="letra"><span>_</span></div>
+							<div id="letra_05" class="letra"><span>_</span></div>
+							<div id="letra_06" class="letra"><span>_</span></div>
+							<div id="letra_07" class="letra"><span>_</span></div>
+							<div id="letra_08" class="letra"><span>_</span></div>
+							<div id="letra_09" class="letra"><span>_</span></div>
+						</td>
+					</tr>
+				</table>
+
+				<table name="banner" id="banner">
+					<tr height="auto">
+						<td width="auto" colspan="3" style="padding-left: 5px;">
+							<a id="vakinha" href="https://www.vakinha.com.br/vaquinha/cha-de-revelacao-marcelle-alisson-e" target="_blank">
+								<div class="vakinha" onclick="monetizar(true)">
+									<div class="dica"><span><!-- 📢  -->"Com as novas regras da ANAC sobre bagagens, 💼 fica meio desvantajoso transportar volumes de São Luís para Brasília, ✈️ mesmo os tradicionais pacotes de fraldas! 🎁 Assim, optamos por receber presentes em dinheiro 💵 e criamos esta VAKINHA 🐄 como alternativa para quem prefere usar cartão de crédito. 💳 Fiquem à vontade em participar ou não e para escolher o valor, certo?" 👍</span></div>
+								</div>
+							</a>
+						</td>
+					</tr>
+					<tr height="30">
+						<td colspan="3" style="padding-top: 1px;">
+							<div id="credito">A.NL, JR.FSS, V.DGT & FA.AL – 15/04/2017 – <span style="font-weight: bold;" onclick="gamificar()">v 2.0</span></div> <!--ondblclick-->
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<table name="tabuleiro" id="tabuleiro">
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="preto" onclick="jogar(this)" value="01"></td>	<td class="preto" onclick="jogar(this)" value="02"></td>	<td class="preto" onclick="jogar(this)" value="03"></td>	<td class="preto" onclick="jogar(this)" value="04"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="preto" onclick="jogar(this)" value="05"></td>	<td class="preto" onclick="jogar(this)" value="06"></td>	<td class="preto" onclick="jogar(this)" value="07"></td>	<td class="preto" onclick="jogar(this)" value="08"></td>	<td class="preto" onclick="jogar(this)" value="09"></td>	<td class="preto" onclick="jogar(this)" value="10"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="preto" onclick="jogar(this)" value="11"></td>	<td class="preto" onclick="jogar(this)" value="12"></td>	<td class="preto" onclick="jogar(this)" value="13"></td>	<td class="branco" onclick="jogar(this)" value="14"></td>	<td class="branco" onclick="jogar(this)" value="15"></td>	<td class="preto" onclick="jogar(this)" value="16"></td>	<td class="preto" onclick="jogar(this)" value="17"></td>	<td class="preto" onclick="jogar(this)" value="18"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="preto" onclick="jogar(this)" value="19"></td>	<td class="preto" onclick="jogar(this)" value="20"></td>	<td class="branco" onclick="jogar(this)" value="21"></td>	<td class="branco" onclick="jogar(this)" value="22"></td>	<td class="branco" onclick="jogar(this)" value="23"></td>	<td class="branco" onclick="jogar(this)" value="24"></td>	<td class="preto" onclick="jogar(this)" value="25"></td>	<td class="preto" onclick="jogar(this)" value="26"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="preto" onclick="jogar(this)" value="27"></td>	<td class="preto" onclick="jogar(this)" value="28"></td>	<td class="branco" onclick="jogar(this)" value="29"></td>	<td class="branco" onclick="jogar(this)" value="30"></td>	<td class="branco" onclick="jogar(this)" value="31"></td>	<td class="branco" onclick="jogar(this)" value="32"></td>	<td class="preto" onclick="jogar(this)" value="33"></td>	<td class="preto" onclick="jogar(this)" value="34"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="branco" onclick="jogar(this)" value="35"></td>	<td class="branco" onclick="jogar(this)" value="36"></td>	<td class="branco" onclick="jogar(this)" value="37"></td>	<td class="preto" onclick="jogar(this)" value="38"></td>	<td class="preto" onclick="jogar(this)" value="39"></td>	<td class="preto" onclick="jogar(this)" value="40"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="branco" onclick="jogar(this)" value="41"></td>	<td class="preto" onclick="jogar(this)" value="42"></td>	<td class="preto" onclick="jogar(this)" value="43"></td>	<td class="preto" onclick="jogar(this)" value="44"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="preto" onclick="jogar(this)" value="45"></td>	<td class="preto" onclick="jogar(this)" value="46"></td>	<td class="preto" onclick="jogar(this)" value="47"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="preto" onclick="jogar(this)" value="48"></td>	<td class="preto" onclick="jogar(this)" value="49"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="branco" onclick="jogar(this)" value="50"></td>	<td class="branco" onclick="jogar(this)" value="51"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="preto" onclick="jogar(this)" value="52"></td>	<td class="preto" onclick="jogar(this)" value="53"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="preto" onclick="jogar(this)" value="54"></td>	<td class="preto" onclick="jogar(this)" value="55"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+				<tr>
+					<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>	<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="azul" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>		<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>	<td class="rosa" onclick="jogar(this)" value="XX"></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

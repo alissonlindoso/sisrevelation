@@ -1,0 +1,646 @@
+body {
+	margin: 10px;
+	padding: 0px;
+
+	text-align: center;
+	vertical-align: middle;
+
+	background: WhiteSmoke;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+
+
+
+#tela {
+	width: auto;
+	height: auto;
+
+	margin: auto;
+	padding: 10px;
+
+	display: inline-block;
+
+	border-width: 10px;
+	border-radius: 25px;
+	border-style: solid;
+	border-color: DarkSlateGrey;
+
+	background-color: LightGrey;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+#ajustavel {
+	margin: 0px;
+	padding-left: 0px;
+
+	display: inline-block;
+
+	/*border: solid;*/
+}
+
+
+
+#painel {
+	width: 370px;
+	height: 375px;
+
+	margin-right: 0px;
+	margin-bottom: -4px;
+	padding: 0px;
+
+	border-width: 5px 5px 3px 5px;
+	border-style:  solid;
+	border-color: DimGrey;
+
+	font-family: Verdana;
+	font-style: normal;
+	color: Black;
+
+	background-color: White;
+
+	box-shadow: 5px 5px 5px Grey;
+}
+
+#painel tr td {
+	border: 3px solid Grey;
+}
+
+
+#painel .titulo {
+	width: 362px;
+	height: 45px;
+	padding: 0px 0px 0px 0px;
+
+	font-size: 30px;
+	font-weight: bold;
+	text-shadow: 3px 3px 0px DarkGray;
+	letter-spacing: 9px;
+	color: MintCream;
+
+ 	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+
+	background-color: LightSlateGray;
+}
+
+
+#painel .tocando {
+	background-image: url(SisRevelation-musica_tocando.png);
+	background-size: 50px 50px;
+	background-position: center center;
+}
+
+#painel .pausada {
+	background-image: url(SisRevelation-musica_pausada.png);
+	background-size: 50px 50px;
+	background-position: center center;
+}
+
+#painel .reiniciar {
+	background-image: url(SisRevelation-reiniciar.png);
+	background-size: 80px 80px;
+	background-position: center center;
+}
+
+#painel div.tocando, div.pausada {
+	width: 50px;
+	height: 50px;
+
+	border: 1px solid Gray;
+
+	box-shadow: 5px 5px 5px SlateGray;
+}
+
+#painel div.tocando:hover, div.pausada:hover {
+	box-shadow: 0px 0px 0px White;
+}
+
+#painel div.reiniciar {
+	width: 50px;
+	height: 50px;
+
+	border: 1px solid Gray;
+
+ 	box-shadow: 5px 5px 5px SlateGray ;
+
+}
+
+#painel .reiniciar:hover {
+	box-shadow: 0px 0px 0px White;
+}
+
+
+#painel .rotulo {
+	width: fit-content;
+	height: auto;
+	padding-bottom: 5px;
+	display: block;
+
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+	text-decoration: underline;
+	color: Black;
+}
+
+
+#painel #placar {
+	vertical-align: top;
+}
+
+#painel #placar #pontuacao_azul {
+	width: 105px;
+	height: 90px;
+
+	border: 1px dotted Gray;
+
+	font-size: 45px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+
+	background-color: DeepSkyBlue;
+	opacity: 0.66;
+}
+
+#painel #placar #pontuacao_versus {
+	margin: 0px;
+	padding: 0px;
+
+	border: 0px;
+
+	font-size: 25px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#painel #placar #pontuacao_rosa {
+	width: 105px;
+	height: 90px;
+
+
+	border: 1px dotted Gray;
+
+	font-size: 45px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+
+	background-color: HotPink;
+	opacity: 0.66;
+}
+
+
+#painel #vez {
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	display: inline-block;
+
+	border: 1px dotted Gray;
+
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+
+	background-color: GhostWhite;
+	opacity: 1.0;
+}
+
+#painel .vez_azul {
+	color: DodgerBlue;
+
+	background-image: url(SisRevelation-balao_azul.png);
+	background-size: 45px 45px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+}
+
+#painel .vez_rosa {
+	color: DeepPink;
+
+	background-image: url(SisRevelation-balao_rosa.png);
+	background-size: 45px 45px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+}
+
+
+#painel #chances {
+	width: 105px;
+	height: 50px;
+	margin: 0 auto;
+	display: inline-block;
+
+	border: 1px dotted Gray;
+
+	font-size: 40px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+
+	background-color: GhostWhite;
+	opacity: 0.66;
+}
+
+
+#painel #rodadas {
+	width: 105px;
+	height: 50px;
+	margin: 0 auto;
+	display: inline-block;
+
+	border: 1px dotted Gray;
+
+	font-size: 40px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+
+	background-color: GhostWhite;
+	opacity: 0.66;
+}
+
+
+#painel .letra {
+	width: 28px;
+	height: 42px;
+	margin: 0 auto;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	display: inline-block;
+
+	border: 1px dashed Gray;
+
+	font-size: 50px;
+	text-align: center;
+	font-family: "Lucida Console"; /* Monaco */
+	vertical-align: middle;
+
+	background-color: GhostWhite;
+	opacity: 0.66;
+}
+
+
+
+#banner {
+	width: 370px;
+	height: 470px;
+
+	margin: 0px;
+	padding: 0px;
+
+	border-width: 3px 5px 5px 5px;
+	border-style:  solid;
+	border-color: DimGrey;
+
+	font-family: Verdana;
+	font-style: normal;
+	color: Black;
+
+	background-color: White;
+
+	box-shadow: 5px 5px 5px Grey;
+}
+
+#banner tr td {
+	border: 3px solid Grey;
+}
+
+
+#banner #vakinha .vakinha {
+	width: 345px;
+	height: 420px;
+
+	margin-top: 4px;
+	margin-bottom: 5px;
+
+	border: 3px ridge LightGray;
+
+	background-image: url(SisRevelation-VAKINHA.PNG);
+	background-size: 345px 420px;
+
+ 	box-shadow: 3px 3px 3px Grey;
+}
+
+#banner #vakinha {
+	position: relative;
+}
+
+.vakinha .dica {
+	width: 32px;
+	height: 26px;
+	border-radius: 25px;
+	border: 10px solid SeaGreen;
+
+	background-image: url(SisRevelation-Alisson_Marcelle.Png);
+	background-size: 32px 26px;
+	background-clip: padding-box;
+
+	position: absolute;
+	z-index: 1;
+	top: 150px;
+	left: 135px;
+
+	opacity: 0;
+
+	transition: all 0.5s ease-in-out 0ms;
+	-webkit-transition: all 0.5s ease-in-out 0ms;
+}
+
+.vakinha .dica span {
+	width: 30px;
+	height: 24px;
+	padding: 15px 10px 5px 10px;
+	border-radius: 15px;
+
+	font-size: 1px;
+	font-style: italic;
+	font-weight: bold;
+	text-align: justify;
+	text-justify: inter-word;
+	line-height: 125%;
+	color: Black;
+	text-shadow: -1px 0 White, 0 1px White, 1px 0 White, 0 -1px White;
+
+	background: rgba(255, 255, 255, 0.25);
+
+	position: absolute;
+	z-index: 0;
+	top: 0px;
+	left: 0px;
+
+	transition: all 0.5s ease-in-out 0ms;
+	-webkit-transition: all 0.5s ease-in-out 0ms;
+}
+
+.vakinha .dica::after {
+    content: " ";
+
+    position: absolute;
+    
+    bottom: 100%;
+    left: 50%;
+    
+    margin-left: -33px;
+    border-width: 33px;
+    
+    border-style: solid;
+    border-color: transparent transparent SeaGreen transparent;
+}
+
+.vakinha:hover .dica {
+	width: 320px;
+	height: 260px;
+
+	left: 5px;
+
+	background-size: 320px 260px;
+
+	opacity: 1;
+}
+
+.vakinha:hover .dica span {
+	width: 300px;
+	height: 240px;
+
+	font-size: 15.5px;
+}
+
+
+#banner #credito {
+	width: 362px;
+	height: 24px;
+	padding-right: 10px;
+
+	font-size: 12.5px;
+	font-style: italic;
+	text-shadow: 1px 1px 0px DarkGray;
+	color: MintCream;
+
+	text-align: right;
+	display: table-cell;
+	vertical-align: middle;
+
+	background-color: LightSlateGray; 
+}
+
+
+
+#tabuleiro {
+	width: 960px;
+	height: 840px;
+
+	margin-top: 0px;
+	margin-left: 10px;
+	padding: 0px;
+
+	display: inline-block;
+	vertical-align: top;
+
+	border: 5px solid DimGrey;
+
+	font-size: 45px;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	color: Black;
+
+	background-image: url(SisRevelation.png);
+	background-size: 960px 840px;
+
+	box-shadow: 5px 5px 5px Grey;
+}
+
+#tabuleiro tr td {
+	border: 1px solid Grey;
+}
+
+#tabuleiro tr {
+	height: 60px;
+}
+
+#tabuleiro td {
+	width: 60px;
+}
+
+
+.estouro {
+	background-image: url(SisRevelation-estouro.gif);
+	background-size: 58px 58px;
+}
+
+.estourado {
+	background-color: White;
+}
+
+.realce_fundo {
+	background-color: Silver;
+}
+
+.realce_fundo_azul {
+	background-color: DodgerBlue;
+}
+
+.realce_fundo_rosa {
+	background-color: DeepPink;
+}
+
+.realce_fonte {
+	color: Crimson;
+}
+
+.realce_fonte_azul {
+	color: DodgerBlue;
+}
+
+.realce_fonte_rosa {
+	color: DeepPink;
+}
+
+.coloca_negrito {
+	font-weight: bold;
+}
+
+.retira_negrito {
+	font-weight: normal;
+}
+
+.coloca_tachado {
+	text-decoration: line-through; /* overline */
+	font-style: italic;
+}
+
+.retira_tachado {
+	text-decoration: none;
+	font-style: normal;
+}
+
+.esmaecer {
+	visibility: hidden;
+	opacity: 0;
+
+	transition: visibility 0s linear 999ms, opacity 999ms;
+	-webkit-transition: visibility 0s linear 999ms, opacity 999ms;
+}
+
+.evidenciar .revelado .preenchido {
+	visibility: visible;
+	opacity: 1;
+
+	transition: visibility 0s linear 0s, opacity 999ms;
+	-webkit-transition: visibility 0s linear 0s, opacity 999ms;
+}
+
+
+
+
+
+.mobile #tela {
+	width: 970px;
+	height: 1243px;
+
+	position: relative;
+}
+
+.mobile #painel {
+	width: 370px;
+	height: 375px;
+
+	margin-right: -7px;
+	margin-bottom: 0px;
+
+	display: inline-block;
+	vertical-align: top;
+
+	position: absolute;
+	top: 10px;
+	left: 10px;
+
+	border-width: 2px 0px 5px 2px;
+}
+
+.mobile #painel tr td {
+	border: 3px solid DimGrey;
+}
+
+.mobile #banner {
+	width: 596px;
+	height: 375px;
+
+	display: inline-block;
+	vertical-align: top;
+
+	position: absolute;
+	top: 10px;
+	right: 10px;
+
+	border-width: 2px 5px 5px 0px;
+}
+
+.mobile #banner tr td {
+	border: 3px solid DimGrey;
+}
+
+.mobile #banner #vakinha .vakinha {
+	width: 575px;
+	height: 325px;
+
+	margin-top: 4px;
+	margin-right: 6px;
+	margin-bottom: 5px;
+
+	background-image: url(SisRevelation-VAKINHA_mobile.PNG);
+	background-size: 575px 325px;
+}
+
+.mobile .vakinha .dica {
+	top: 25px;
+	left: 133px;
+}
+
+.mobile .vakinha .dica::after {
+    top: 33%;
+    left: -13%;
+    
+    margin-top: -33px;
+    border-width: 33px;
+    
+    border-color: transparent SeaGreen transparent transparent;
+}
+
+.mobile #banner #credito {
+	width: 586px;
+	height: 25px;
+
+	letter-spacing: 3px;
+}
+
+.mobile #tabuleiro {
+	margin-top: 10px;
+	margin-left: 0px;
+
+	display: block;
+	vertical-align: bottom;
+
+	position: absolute;
+	top: 393px;
+}
