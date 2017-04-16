@@ -6,10 +6,10 @@
         id        = "com.phonegap.sisrevelation"
         version   = "1.0.0">
 
-    <name>sisrevelation</name>
+    <name>SisRevelation</name>
 
     <description>
-        Chá de Revelação - Alisson & Macelle
+        Chá de Revelação - Alisson e Macelle
     </description>
 
     <author href="http://sisrevelation.herokuapp.com" email="alissonlindoso@gmail.com">
