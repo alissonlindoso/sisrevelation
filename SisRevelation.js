@@ -13,8 +13,8 @@ var somCashier = new Audio('SisRevelation-cashier.mp3');
 var somClapping = new Audio('SisRevelation-clapping.mp3');
 
 
-var NUM_MIN_JOGADAS = 3;
-var NUM_MAX_JOGADAS = 5;
+var NUM_MIN_JOGADAS = 9;
+var NUM_MAX_JOGADAS = 9;
 
 
 
@@ -125,6 +125,18 @@ function comutarDesktopMobile() {
 	}else {
 		$(document.body).removeClass("mobile");
 	}
+	
+/*
+alert($("body").css("transform"));
+	
+alert(window.width + " " + window.innerWidth + " " + window.outerWidth + " " + $("#tela").css("width") + " " + $("#tela").width() + " " + $("#tela").innerWidth() + " " + $("#tela").outerWidth());
+*/
+	
+	var escala = 0.975 * window.innerWidth / $("#tela").outerWidth();
+	
+//alert(escala);
+	
+	$("body").css("transform", "scale(" + escala + ")");
 }
 
 

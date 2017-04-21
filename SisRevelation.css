@@ -2,15 +2,18 @@ body {
 	margin: 10px;
 	padding: 0px;
 
-	text-align: center;
+	text-align: left;
 	vertical-align: top;
 
 	background: WhiteSmoke;
-/*
+/* 
 	-webkit-transform: scale(0.5, 0.5);
     -moz-transform: scale(0.5, 0.5);
     -ms-transform: scale(0.5, 0.5);
     transform: scale(0.5, 0.5);
+    zoom: 0.5; // Old IE only
+    
+    transform-origin: top left;
 */
 }
 
