@@ -117,13 +117,24 @@ controle.iniciar();
 
 
 function comutarDesktopMobile() {
+	var escala = 0.98;
+	var origem = "top ";
+
 //	var necessario = ($("#tabuleiro").width() + $("#painel").width());
 
 //	if(/*window.innerWidth < necessario || */window.innerHeight > window.innerWidth) {
 	if(window.innerHeight > window.innerWidth) {
 		$(document.body).addClass("mobile");
+
+		escala *= window.innerWidth / $("#tela").outerWidth();
+
+		origem += "left";
 	}else {
 		$(document.body).removeClass("mobile");
+
+		escala *= window.innerHeight / $("#tela").outerHeight();
+
+		origem += "center";
 	}
 	
 /*
@@ -131,13 +142,11 @@ alert($("body").css("transform"));
 	
 alert(window.width + " " + window.innerWidth + " " + window.outerWidth + " " + $("#tela").css("width") + " " + $("#tela").width() + " " + $("#tela").innerWidth() + " " + $("#tela").outerWidth());
 */
-
-	var escala = 0.98 * window.innerWidth / $("#tela").outerWidth();
 	
 //alert(escala);
 	
 	$("html").css("transform", "scale(" + escala + ")");
-
+	$("html").css("transform-origin", origem);
 }
 
 
