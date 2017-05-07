@@ -13,8 +13,8 @@ var somCashier = new Audio('SisRevelation-cashier.mp3');
 var somClapping = new Audio('SisRevelation-clapping.mp3');
 
 
-var NUM_MIN_JOGADAS = 9;
-var NUM_MAX_JOGADAS = 9;
+var NUM_MIN_JOGADAS = 3;
+var NUM_MAX_JOGADAS = 5;
 
 
 
@@ -22,7 +22,7 @@ var nomes = [
 /*  3 */	"ANA", "LIS", "SOL", 
 /*  4 */	"HUGO", "JOSÉ", "NETO", "ROSA", "DIVA", "LARA", "JOÃO", "FLOR", "DAVI", "YSIS", "ENZO", "THOR", "THEO", 'IEDA', 'ELIS', 'INÊS', 
 /*  5 */	"FÁBIO", "BRUNO", "CÉLIA", "DIEGO", "EDINA", "IRENE", "LÍDIA", "LUIZA", "MARIA", "NORMA", "NÚBIA", "ROQUE", "ALLAN", "LUANA", "ALANA", "ALINE", "JÔNIO", "LÍLIA", "LUÍSA", "PAULA", "RAVEL", "JULIA", "ALICE", "PEDRO", "YANKA", "YANNA", "MAYSA", 'ILMAR', 'TIAGO', 'BRENA', 
-/*  6 */	"VICTOR", "ANDREA", "ANILDE", "FLÁVIA", "FÁTIMA", "LAYSSA", "LOÍDES", "MARYAN", "MAYANA", "NILSON", "RÂNIDE", "RÔMULO", "TALYTA", "TERESA", "CARLOS", "ARTHUR", "LUIMAR", "ÂNGELO", "CARLOS", "DENYSE", "LILIAN", "MIGUEL", "NONATO", "RAFAEL", "REGINA", "SUZANA", "HELENA", "CELINA", "YASMIN", "VIVIAN", "MATEUS", "ALEXIA", "ELISON", "ALÍCIA", "FELIPE", "HEITOR", 'DAIANA', 'DAYANE', 'EMILLY', 'MARCOS', 'DANIEL', 
+/*  6 */	"VICTOR", "ANDREA", "ANILDE", "FLÁVIA", "FÁTIMA", "LAYSSA", "LOÍDES", "MARYAN", "MAYANA", "NILSON", "RÂNIDE", "RÔMULO", "TALYTA", "TERESA", "CARLOS", "ARTHUR", "LUIMAR", "ÂNGELO", "CARLOS", "DENYSE", "LILIAN", "MIGUEL", "NONATO", "RAFAEL", "REGINA", "SUZANA", "HELENA", "CELINA", "YASMIN", "VIVIAN", "MATEUS", "ALEXIA", "ELISON", "ALÍCIA", "FELIPE", "HEITOR", 'DAIANA', 'DAYANE', 'EMILLY', 'MARCOS', 'DANIEL', 'REBECA', 
 /*  7 */	"RODRIGO", "ALISSON", "ADRIANO", "CELIANE", "CÍNTHIA", "EDUARDO", "EUGÊNIO", "GABRIEL", "GLÁUCIA", "LARISSA", "LUCIANA", "LUCÉLIA", "RICARDO", "TATIANA", "VALESKA", "VIVIANE", "ZAYANNA", "ZAYLSON", "ALBERTO", "IRACEMA", "NICOLAS", "EMERSON", "ALBERTO", "LEANDRO", "MARLENE", "SOCORRO", "GUSTAVO", "MARIANA", "CECÍLIA", "BENÍCIO", "MELINDA", "ISADORA", "NATÁLIA", "MARCELO", "BEATRIZ", 'ROBERTA', 'HAROLDO', 'MARCELA', 
 /*  8 */	"MARCELLE", "CLARISSA", "CLEONICE", "LEILIANE", "LEONARDO", "NATHALIA", "PATRÍCIA", "THALISSA", "THALISSE", "EDMILSON", "NAZARENO", "ANTONIEL", "CAROLINA", "CRISTINA", "FRANKLIN", "HENRIQUE", "MAURÍCIO", "RAIMUNDO", "REINALDO", "VERÔNICA", "TARCÍSIO", "BENJAMIN", "FERNANDA", 
 /*  9 */	"ALEXANDRE", "CLEMILTON", "CLEVERSON", "JEFFERSON", "VALENTINA", "GUILHERME", "DONATELLA", "CAROLLINE", 
@@ -131,12 +131,13 @@ alert($("body").css("transform"));
 	
 alert(window.width + " " + window.innerWidth + " " + window.outerWidth + " " + $("#tela").css("width") + " " + $("#tela").width() + " " + $("#tela").innerWidth() + " " + $("#tela").outerWidth());
 */
-	
-	var escala = 0.975 * window.innerWidth / $("#tela").outerWidth();
+
+	var escala = 0.98 * window.innerWidth / $("#tela").outerWidth();
 	
 //alert(escala);
 	
-	$("body").css("transform", "scale(" + escala + ")");
+	$("html").css("transform", "scale(" + escala + ")");
+
 }
 
 
